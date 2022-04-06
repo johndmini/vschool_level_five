@@ -9,7 +9,7 @@ app.use(morgan('dev'));
 mongoose.connect('mongodb://localhost:27017/db-methods', console.log('Connected to Database'));
 
 app.use('/books', require('./routes/bookRouter.js'));
-app.use('/author', require('./routes/authorRouter.js'));
+app.use('/authors', require('./routes/authorRouter.js'));
 
 app.use((err, req, res, next) => {
     console.log(err);
